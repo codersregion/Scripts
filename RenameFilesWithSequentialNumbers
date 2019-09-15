@@ -1,0 +1,12 @@
+@echo off
+setlocal EnableDelayedExpansion
+
+set filename=F
+set suffix=100
+for /F "delims=" %%i in ('dir /B *.jpg') do (
+echo "saad"
+   set /A suffix+=1
+   ren "%%i" "%filename%-!suffix:~1!.jpg"
+)
+
+cmd /k
